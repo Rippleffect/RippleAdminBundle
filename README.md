@@ -38,7 +38,7 @@ And then add the package as a dependency:
 Now you can update your dependencies as normal using `composer update`.
 
 Your `app/config/security.yml` configuration should look something like below (with two separate firewalls for "admin"
-and "main". The admin firewall is for restricting access to the backend, and the main firewall is your default frontend
+and "main"). The admin firewall is for restricting access to the backend, and the main firewall is your default frontend
 firewall which should largely remain untouched.
 
     jms_security_extra:
@@ -175,7 +175,7 @@ The `app/config/admin.yml` content:
 
         templates:
             # default global templates
-            layout:  RippledminBundle::standard_layout.html.twig
+            layout:  SonataAdminBundle::standard_layout.html.twig
             ajax:    SonataAdminBundle::ajax_layout.html.twig
             dashboard: SonataAdminBundle:Core:dashboard.html.twig
 
@@ -185,7 +185,7 @@ The `app/config/admin.yml` content:
             edit:    SonataAdminBundle:CRUD:edit.html.twig
 
             # additional template blocks
-            user_block:               MyFoodAdminBundle:Sonata:user_block.html.twig
+            user_block:               RippleAdminBundle:Sonata:user_block.html.twig
             preview:                  SonataAdminBundle:CRUD:preview.html.twig
             history:                  SonataAdminBundle:CRUD:history.html.twig
             history_revision:         SonataAdminBundle:CRUD:history_revision.html.twig
