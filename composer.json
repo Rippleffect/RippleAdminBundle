@@ -1,0 +1,34 @@
+{
+    "name": "rippleffect/admin-bundle",
+    "type": "symfony-bundle",
+    "description": "Rippleffect Administration Bundle",
+    "homepage": "http://github.com/rippleffect/RippleAdminBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Halsall",
+            "email": "jhalsall@rippleffect.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.10",
+        "rippleffect/user-bundle": "1.0.x",
+        "sonata-project/admin-bundle": "2.2.x-dev",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.x-dev",
+        "sonata-project/block-bundle": "2.2.x-dev",
+        "sonata-project/cache-bundle": "2.1.x-dev",
+        "sonata-project/intl-bundle": "2.1.x-dev",
+        "sonata-project/user-bundle": "2.2.x-dev"
+    },
+    "autoload": {
+        "psr-0": { "Ripple\\AdminBundle": "" }
+    },
+    "target-dir": "Ripple/AdminBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
+
