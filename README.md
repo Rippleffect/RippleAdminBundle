@@ -347,6 +347,18 @@ To override fields used in the admin interface for Users, we need to create a ne
 
 For an idea of how to add fields to views, and what these various views mean check the [SonataAdminBundle documentation][1].
 
+Now we have created our service class, we need to tell Sonata to use our application specific UserAdmin class. To do this
+we just need to change a line in the `app/config/admin.yml` file:
+
+    sonata_user:
+        admin:
+            user:
+                class: Vendor\AdminBundle\Admin\Entity\UserAdmin #this is the class we just created :)
+
+Now, whenever you visit the Users area of the `SonataAdminBundle` interface, Sonata will use your service class to render
+ its fields. If you don't wish to customise a section, then just ommit the method from your service class and Sonata will
+ fall back to the RippleAdminBundle implementation for that section.
+
 Overriding Template Blocks
 ---------------------------
 
@@ -377,8 +389,8 @@ The admin bundle is built upon blocks re-usable template blocks which can be ove
     inner_list_row:           SonataAdminBundle:CRUD:list_inner_row.html.twig
     base_list_field:          SonataAdminBundle:CRUD:base_list_field.html.twig
 
-These can all be overridden to point at your own bundle's view templates (good practice is to place your templates below
-the `Vendor\AdminBundle\Resources\views` section, and make it correspond with the default template location. For example,
+These can all be changed to point at your own bundle's view templates (good practice is to place your templates below
+the `Vendor\AdminBundle\Resources\views` folder, and make it correspond with the default template location. For example,
 if we were to override the `delete` template block, we would place it in `Vendor\AdminBundle\Resources\views\CRUD\delete.html.twig`.
 
 [1]: http://sonata-project.org/bundles/admin/master/doc/index.html
