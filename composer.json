@@ -21,7 +21,7 @@
         "rippleffect/user-bundle": "*",
         "sonata-project/core-bundle": "*",
         "sonata-project/admin-bundle": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "",
+        "sonata-project/doctrine-orm-admin-bundle": "*",
         "sonata-project/block-bundle": "*",
         "sonata-project/cache-bundle": "*",
         "sonata-project/intl-bundle": "*",
